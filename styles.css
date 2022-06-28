@@ -4,24 +4,22 @@ body {
   align-items: center;
 }
 
-.board {
+.container {
+  display: flex;
+  flex-direction: column;
   width: 31.25rem;
   height: 31.25rem;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .children {
   background: blue;
   display: flex;
+  flex-grow: 1;
 }
 
 .xChildren {
   background: red;
-  width: 2px;
-  height: 10px;
+  width: auto;
+  height: auto;
   flex-grow: 1;
 }

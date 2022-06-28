@@ -13,4 +13,4 @@ function AppendElements(yNodeCount, xNodeCount) {
   }
 }
 
-AppendElements(10, 20)
+AppendElements(16, 16)
