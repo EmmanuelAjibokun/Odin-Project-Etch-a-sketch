@@ -4,9 +4,14 @@ body {
   align-items: center;
 }
 
+.board {
+  width: 31.25rem;
+  height: 31.25rem;
+}
+
 .container {
   display: grid;
-  grid-template-columns: 700px;
+  grid-template-columns: 1fr;
 }
 
 .children {
