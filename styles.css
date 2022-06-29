@@ -18,8 +18,11 @@ body {
 }
 
 .xChildren {
-  background: red;
   width: auto;
   height: auto;
   flex-grow: 1;
+}
+
+.xChildren:hover {
+  background: red;
 }
