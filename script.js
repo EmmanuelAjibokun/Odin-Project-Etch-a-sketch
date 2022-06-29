@@ -13,7 +13,7 @@ function AppendElements(yNodeCount, xNodeCount) {
   }
 }
 
-AppendElements(9, 9)
+AppendElements(16, 4)
 
 container.addEventListener('click', (e) => {
   e.target.style.cssText = 'background: black';

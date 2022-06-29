@@ -4,6 +4,14 @@ body {
   align-items: center;
 }
 
+.board {
+  display: flex;
+}
+
+.grid-number {
+  height: 30px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
