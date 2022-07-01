@@ -1,19 +1,26 @@
 const container = document.querySelector('.container');
-
+const grandChild = document.getElementsByClassName('xChildren')
+const undoBtn = document.querySelector('.grid-undo');
 const grid = document.querySelector('.grid-number');
-
+const eraser = document.querySelector('.eraser');
 
 grid.addEventListener('click', updateGrid)
 
+function undoGrid() {
+  for(const child of grandChild) {
+    child.style.cssText = 'background: white';
+  }
+}
+
 function updateGrid() {
-  let div = document.getElementsByClassName('children');
-  let div2 = document.getElementsByClassName('xChidren');
-  div.removeChild(div2);
+  for(let i = container.children.length; i > 0; i--) {
+    for(const child of container.children) {
+      container.removeChild(child)
+    }
+  }
   let gridValue = prompt("Grid number should be between 1-100: ");
   gridDisplay(gridValue, gridValue)
 }
-
-
 
 function gridDisplay(yNodeCount, xNodeCount) {
   for (let i = 0;i < yNodeCount; ++i) {
@@ -26,12 +33,16 @@ function gridDisplay(yNodeCount, xNodeCount) {
       div.appendChild(div2);
     }
   }
-
 }
 
 container.addEventListener('click', (e) => {
   e.target.style.cssText = 'background: black';
-  console.log(e.target)
 })
 
-gridDisplay(4, 4)
+undoBtn.addEventListener('click', undoGrid)
+
+gridDisplay(16, 16)
+    // for(const grandChild of child.children) {
+    //   grandChild.parentNode.removeChild(grandChild)
+    //   console.log(grandChild)
+    // }

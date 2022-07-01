@@ -4,6 +4,14 @@ body {
   display: flex;
   justify-content: center;
   background-color: #e5e5e5;
+  align-items: flex-start;
+}
+
+header p {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
 .board {
@@ -41,4 +49,8 @@ body {
 
 .xChildren:hover {
   background: grey;
+}
+
+button:active {
+  background: blue;
 }
