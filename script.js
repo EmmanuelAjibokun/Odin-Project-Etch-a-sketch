@@ -47,7 +47,19 @@ container.addEventListener('click', (e) => {
 })
 
 eraser.addEventListener('click', () => {
-
+  if(isEraserButtonClicked === false) {
+    container.addEventListener('click', e => {
+    e.target.style.cssText = 'background: white';
+    })
+    isEraserButtonClicked = true;
+    console.log("is eraser button is clicked")
+  } else if(isEraserButtonClicked === true) {
+    container.addEventListener('click', (e) => {
+      e.target.style.cssText = 'background: black';
+    })
+    isEraserButtonClicked = false;
+    console.log("is eraser is unclicked")
+  }
 })
 
 undoBtn.addEventListener('click', undoGrid)
