@@ -54,3 +54,9 @@ header p {
 button:active {
   background: blue;
 }
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -3,6 +3,7 @@ const grandChild = document.getElementsByClassName('xChildren')
 const undoBtn = document.querySelector('.grid-undo');
 const grid = document.querySelector('.grid-number');
 const eraser = document.querySelector('.eraser');
+let isEraserButtonClicked = false;
 
 grid.addEventListener('click', updateGrid)
 
@@ -35,8 +36,18 @@ function gridDisplay(yNodeCount, xNodeCount) {
   }
 }
 
+function erasePixel() {
+  container.addEventListener('click', e => {
+    e.target.style.cssText = 'background: white';
+  })
+}
+
 container.addEventListener('click', (e) => {
   e.target.style.cssText = 'background: black';
+})
+
+eraser.addEventListener('click', () => {
+
 })
 
 undoBtn.addEventListener('click', undoGrid)
