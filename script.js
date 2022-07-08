@@ -65,7 +65,3 @@ eraser.addEventListener('click', () => {
 undoBtn.addEventListener('click', undoGrid)
 
 gridDisplay(16, 16)
-    // for(const grandChild of child.children) {
-    //   grandChild.parentNode.removeChild(grandChild)
-    //   console.log(grandChild)
-    // }
