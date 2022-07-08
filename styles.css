@@ -5,6 +5,7 @@ body {
   justify-content: center;
   background-color: #e5e5e5;
   align-items: flex-start;
+  padding: 0 20px 20px;
 }
 
 header p {
@@ -59,4 +60,11 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .board {
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
 }
