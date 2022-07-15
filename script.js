@@ -46,6 +46,10 @@ container.addEventListener('click', (e) => {
   e.target.style.cssText = 'background: black';
 })
 
+container.addEventListener('dragover', (e) => {
+  e.target.style.cssText = 'background: black';
+})
+
 eraser.addEventListener('click', () => {
   if(isEraserButtonClicked === false) {
     container.addEventListener('click', e => {
